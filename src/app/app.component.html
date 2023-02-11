@@ -1,0 +1,35 @@
+<button (click)="openModal()">Open Modal</button>
+
+
+<div class="modal-backdrop" *ngIf="showModal" (click)="closeModal()"></div>
+<div class="modal" *ngIf="showModal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3 class="modal-title">Add Client</h3>
+      <button class="modal-close" (click)="closeModal()">x</button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input placeholder="Name" type="text" id="name" name="name" [(ngModel)]="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input placeholder="Email" type="email" id="email" name="email" [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input placeholder="Phone" type="tel" id="phone" name="phone" [(ngModel)]="phone">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input placeholder="Password" type="password" id="password" name="password" [(ngModel)]="password">
+        </div>
+        <button type="submit">CREATE USER</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
